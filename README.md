@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/white-white519/Soul_Fracture/assets/ваш_айди_или_картинка" width="150" height="150" alt="Soul Fracture Logo"> <!-- Замени на свою картинку, если захочешь -->
   
-  # ⚔️ Soul Fracture ⚔️
+  # Soul Fracture 
   **Смерть — это не конец. Это лишь рассинхронизация.**
 
   [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green?style=for-the-badge&logo=minecraft)](https://minecraft.net)
