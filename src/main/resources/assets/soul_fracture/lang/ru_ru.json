@@ -1,3 +1,5 @@
 {
-  "item.soul_fracture.amulet": "Амулет Души"
+  "item.soul_fracture.amulet": "Амулет Души",
+  "key.soul_fracture.open_menu": "Открыть меню души",
+  "category.soul_fracture": "Soul Fracture"
 }

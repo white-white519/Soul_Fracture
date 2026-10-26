@@ -79,7 +79,14 @@ public class Soul_fracture {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-
+    @SubscribeEvent
+    public void onClientTick(net.minecraftforge.event.TickEvent.ClientTickEvent event) {
+        if (event.phase == net.minecraftforge.event.TickEvent.Phase.END) {
+            while (KeyBindings.OPEN_MENU_KEY.consumeClick()) {
+                Minecraft.getInstance().setScreen(new SoulMenuScreen());
+            }
+        }
+    }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
@@ -89,6 +96,11 @@ public class Soul_fracture {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+
+        @SubscribeEvent
+        public static void registerKeys(net.minecraftforge.client.event.RegisterKeyMappingsEvent event) {
+            event.register(KeyBindings.OPEN_MENU_KEY);
         }
     }
 }

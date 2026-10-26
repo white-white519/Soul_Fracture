@@ -14,21 +14,21 @@ public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partia
     int width = 200;
     int height = 150;
 
-    guiGraphics.fill(centerX - width / 2, centerY - height / 2, centerX + width / 2, centerY + height / 2, 0xFFC6C6C6);
+    guiGraphics.fill(centerX - width / 2 - 1, centerY - height / 2 - 1, centerX + width / 2 + 1, centerY + height / 2 + 1, 0xFF000000);
 
-    guiGraphics.fill(centerX - width / 2 - 1, centerY - height / 2 - 1, centerX + width / 2 - 1, centerY + height / 2 + 1, 0xFF000000);
+    guiGraphics.fill(centerX - width / 2, centerY - height / 2, centerX + width / 2, centerY + height / 2, 0xFFC6C6C6);
 
     guiGraphics.drawCenteredString(this.font, this.title, centerX, centerY - height / 2 + 10, 0x404040);
     super.render(guiGraphics, mouseX, mouseY, partialTick);
 }
 @Override
-public boolean keyPressed(int keyCode, int scanCode, int modifires) {
+public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
     if (keyCode == GLFW.GLFW_KEY_ESCAPE || keyCode == GLFW.GLFW_KEY_Y) {
         this.minecraft.setScreen(null);
         return true;
 
     }
-    return super.keyPressed(keyCode, scanCode, modifires);
+    return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
 }
